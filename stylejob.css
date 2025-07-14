@@ -1,0 +1,142 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #34adff;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Form Box */
+.apply_box {
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 50px auto;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Title */
+.title_small {
+    font-size: 20px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Form Layout */
+.form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+}
+
+/* Form Controls */
+.form_control,
+.textarea_control {
+    width: 80%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form_control label,
+.textarea_control label {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    width: 100%;
+    transition: box-shadow 0.2s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    box-shadow: 0 0 5px rgba(0, 47, 255, 0.3);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline-color: rgb(38, 0, 255);
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+}
+
+/* Button */
+.button_container {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin-top: 20px;
+}
+
+button {
+    background-color: rgb(0, 47, 255);
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ccc;
+    border: 2px solid rgb(0, 47, 255);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+/* Success Message */
+#message {
+    font-size: 16px;
+    color: green;
+    margin-bottom: 15px;
+    animation: fadeIn 0.5s ease-in;
+    text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .apply_box {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .form_control,
+    .textarea_control,
+    .button_container {
+        width: 100%;
+    }
+}
